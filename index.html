@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lecture 1 · Dates & Times</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕒</text></svg>" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-sky-500 to-indigo-700 text-white">
+  <main class="mx-auto max-w-2xl px-4 py-8">
+    <h1 class="text-3xl font-bold">🕒 What time is it there?</h1>
+    <p class="mt-2 text-sky-100">Pick a city. Compare your laptop's clock with the city's clock.</p>
+
+    <div class="mt-6 flex flex-wrap gap-2">
+      <button id="stockton-btn" type="button" class="rounded-xl bg-amber-400 px-4 py-2 font-semibold text-slate-900 hover:bg-amber-300">Stockton</button>
+      <button id="london-btn" type="button" class="rounded-xl bg-amber-400 px-4 py-2 font-semibold text-slate-900 hover:bg-amber-300">London</button>
+      <button id="tokyo-btn" type="button" class="rounded-xl bg-amber-400 px-4 py-2 font-semibold text-slate-900 hover:bg-amber-300">Tokyo</button>
+    </div>
+
+    <section class="mt-6 rounded-3xl bg-white/15 p-4 shadow-xl sm:p-6">
+      <h2 id="city-name" class="text-2xl font-bold"></h2>
+
+      <table class="mt-4 w-full text-left text-sm sm:text-base">
+        <thead>
+          <tr class="text-sky-100">
+            <th class="py-2 pr-2"></th>
+            <th class="py-2 pr-2">💻 Your laptop ❌</th>
+            <th class="py-2">🌍 The city ✅</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-white/20">
+            <td class="py-2 pr-2 font-semibold">Date</td>
+            <td id="laptop-date" class="py-2 pr-2"></td>
+            <td id="city-date" class="py-2"></td>
+          </tr>
+          <tr class="border-t border-white/20">
+            <td class="py-2 pr-2 font-semibold">Sunrise</td>
+            <td id="laptop-sunrise" class="py-2 pr-2"></td>
+            <td id="city-sunrise" class="py-2"></td>
+          </tr>
+          <tr class="border-t border-white/20">
+            <td class="py-2 pr-2 font-semibold">Sunset</td>
+            <td id="laptop-sunset" class="py-2 pr-2"></td>
+            <td id="city-sunset" class="py-2"></td>
+          </tr>
+          <tr class="border-t border-white/20">
+            <td class="py-2 pr-2 font-semibold">Last updated</td>
+            <td id="laptop-updated" class="py-2 pr-2"></td>
+            <td id="city-updated" class="py-2"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- sample-data.js first, so scripts.js can use sampleWeather -->
+  <script src="sample-data.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
