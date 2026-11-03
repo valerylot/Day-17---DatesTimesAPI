@@ -37,7 +37,7 @@ function getLaptopDate(unixSeconds) {
 //   3. return date.toLocaleTimeString("en-US", { timeZone: "UTC", hour: "numeric", minute: "2-digit" })
 function getCityTime(unixSeconds, timezone) {
   const date = new Date((unixSeconds + timezone) * 1000);
-  return date.toLocaleTimeString("en-US", {hour: "numeric", minute: "2-digit"});
+  return date.toLocaleTimeString("en-US", {hour: "numeric", minute: "2-digit", timeZone: "UTC"});
 }
 
 // TODO 3: finish getCityDate. Same 2 steps, but use toLocaleDateString with
